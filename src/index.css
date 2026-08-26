@@ -58,6 +58,13 @@ body {
 .accent-border:hover { border-color: #65ff9d; background: rgba(47, 247, 122, .08); }
 .link-accent:hover { color: #65ff9d; }
 
+.social-link { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid rgba(101, 255, 157, .28); border-radius: 999px; background: rgba(3, 8, 4, .55); padding: .5rem .8rem .5rem .55rem; color: #cbd5d1; font-size: .85rem; font-weight: 500; backdrop-filter: blur(8px); transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease; }
+.social-link:hover { transform: translateY(-2px); border-color: #2ff77a; background: rgba(47, 247, 122, .12); color: #f4fff8; }
+.social-icon { display: grid; width: 1.7rem; height: 1.7rem; place-items: center; border-radius: 50%; background: rgba(47, 247, 122, .14); color: #65ff9d; }
+.social-icon svg { width: .9rem; height: .9rem; fill: currentColor; }
+.social-arrow { color: #2ff77a; font-size: .8rem; transition: transform .2s ease; }
+.social-link:hover .social-arrow { transform: translate(2px, -2px); }
+
 .brand-typewriter { display: inline-block; min-width: 8.7rem; }
 .brand-cursor { display: inline-block; margin-left: 1px; color: #2ff77a; animation: cursor-blink .8s steps(1, end) infinite; }
 @keyframes cursor-blink { 50% { opacity: 0; } }
