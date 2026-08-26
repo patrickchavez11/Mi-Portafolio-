@@ -58,15 +58,19 @@ body {
 .accent-border:hover { border-color: #65ff9d; background: rgba(47, 247, 122, .08); }
 .link-accent:hover { color: #65ff9d; }
 
+.brand-typewriter { display: inline-block; min-width: 8.7rem; }
+.brand-cursor { display: inline-block; margin-left: 1px; color: #2ff77a; animation: cursor-blink .8s steps(1, end) infinite; }
+@keyframes cursor-blink { 50% { opacity: 0; } }
+
 /* Trama fluida del hero: tres campos de puntos que se desplazan lentamente. */
-.hero-flow { position: absolute; inset: 0; z-index: -2; overflow: hidden; opacity: .52; pointer-events: none; }
-.hero-flow::before, .hero-flow::after, .hero-flow i { content: ""; position: absolute; display: block; width: 74%; height: 44%; background-image: radial-gradient(circle, rgba(126, 255, 169, .52) 1px, transparent 1.5px); background-size: 13px 13px; filter: blur(.1px); mask-image: radial-gradient(ellipse at center, #000 10%, rgba(0,0,0,.8) 42%, transparent 72%); }
-.hero-flow::before { left: -20%; top: -9%; transform: rotate(-9deg) skewX(-16deg); animation: flow-a 14s ease-in-out infinite alternate; }
-.hero-flow::after { right: -19%; top: 0; transform: rotate(12deg) skewX(18deg); animation: flow-b 17s ease-in-out infinite alternate; }
-.hero-flow i:nth-child(1) { left: 8%; bottom: -22%; transform: rotate(6deg) scaleX(1.5); opacity: .55; animation: flow-c 19s ease-in-out infinite alternate; }
-.hero-flow i:nth-child(2) { right: 8%; bottom: -24%; transform: rotate(-7deg) scaleX(1.35); opacity: .48; animation: flow-a 16s ease-in-out infinite alternate-reverse; }
-.hero-flow i:nth-child(3) { left: 37%; top: 25%; width: 35%; height: 36%; opacity: .2; animation: flow-b 13s ease-in-out infinite alternate-reverse; }
-@keyframes flow-a { to { transform: rotate(-3deg) skewX(-5deg) translate(5%, 8%) scale(1.1); } }
-@keyframes flow-b { to { transform: rotate(4deg) skewX(6deg) translate(-7%, 9%) scale(1.12); } }
-@keyframes flow-c { to { transform: rotate(-4deg) translate(4%, -9%) scaleX(1.6); } }
+.hero-flow { position: absolute; inset: 0; z-index: -2; overflow: hidden; opacity: .72; pointer-events: none; }
+.hero-flow::before, .hero-flow::after, .hero-flow i { content: ""; position: absolute; display: block; width: 74%; height: 44%; background-image: radial-gradient(circle, rgba(126, 255, 169, .7) 1.1px, transparent 1.7px); background-size: 12px 12px; filter: blur(.1px); mask-image: radial-gradient(ellipse at center, #000 10%, rgba(0,0,0,.85) 45%, transparent 74%); }
+.hero-flow::before { left: -20%; top: -9%; transform: rotate(-9deg) skewX(-16deg); animation: flow-a 8s ease-in-out infinite alternate; }
+.hero-flow::after { right: -19%; top: 0; transform: rotate(12deg) skewX(18deg); animation: flow-b 10s ease-in-out infinite alternate; }
+.hero-flow i:nth-child(1) { left: 8%; bottom: -22%; transform: rotate(6deg) scaleX(1.5); opacity: .7; animation: flow-c 11s ease-in-out infinite alternate; }
+.hero-flow i:nth-child(2) { right: 8%; bottom: -24%; transform: rotate(-7deg) scaleX(1.35); opacity: .62; animation: flow-a 9s ease-in-out infinite alternate-reverse; }
+.hero-flow i:nth-child(3) { left: 37%; top: 25%; width: 35%; height: 36%; opacity: .3; animation: flow-b 7s ease-in-out infinite alternate-reverse; }
+@keyframes flow-a { to { transform: rotate(2deg) skewX(-1deg) translate(10%, 13%) scale(1.18); } }
+@keyframes flow-b { to { transform: rotate(-3deg) skewX(2deg) translate(-12%, 14%) scale(1.2); } }
+@keyframes flow-c { to { transform: rotate(-8deg) translate(9%, -14%) scaleX(1.78); } }
 @media (prefers-reduced-motion: reduce) { .hero-flow::before, .hero-flow::after, .hero-flow i { animation: none; } }
