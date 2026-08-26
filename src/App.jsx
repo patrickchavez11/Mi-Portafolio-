@@ -9,5 +9,5 @@ import Contact from "./componentes/Contact";
 import Footer from "./componentes/Footer";
 
 export default function App() {
-  return <div className="min-h-screen overflow-hidden bg-[#09090b] text-zinc-100"><Navbar /><main><Hero /><About /><Skills /><Projects /><Experience /><Process /><Contact /></main><Footer /></div>;
+  return <div className="portfolio-shell min-h-screen overflow-hidden text-zinc-100"><div className="noise" /><Navbar /><main><Hero /><About /><Skills /><Projects /><Experience /><Process /><Contact /></main><Footer /></div>;
 }

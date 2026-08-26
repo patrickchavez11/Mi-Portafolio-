@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #0a0a0a;
+  background: #030804;
   color: #f5f5f5;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -33,6 +33,40 @@ body {
 }
 
 ::selection {
-  background: #a855f7;
-  color: white;
+  background: #2ff77a;
+  color: #030804;
 }
+
+.portfolio-shell {
+  background-color: #030804;
+  background-image: linear-gradient(rgba(47, 247, 122, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(47, 247, 122, .035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.noise { position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .14; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E"); }
+
+.eyebrow { color: #65ff9d; }
+
+.accent-text { color: #65ff9d; }
+.accent-bg { background: #2ff77a; box-shadow: 0 0 28px rgba(47, 247, 122, .18); }
+.accent-border { border-color: rgba(47, 247, 122, .55); }
+.accent-line { background: #2ff77a; }
+.accent-glow { background: rgba(47, 247, 122, .14); }
+.section-surface { background: rgba(20, 65, 37, .17); }
+.card-surface { background: #071009; }
+.accent-bg:hover { background: #65ff9d; color: #041008; box-shadow: 0 0 36px rgba(47, 247, 122, .38); }
+.accent-border:hover { border-color: #65ff9d; background: rgba(47, 247, 122, .08); }
+.link-accent:hover { color: #65ff9d; }
+
+/* Trama fluida del hero: tres campos de puntos que se desplazan lentamente. */
+.hero-flow { position: absolute; inset: 0; z-index: -2; overflow: hidden; opacity: .52; pointer-events: none; }
+.hero-flow::before, .hero-flow::after, .hero-flow i { content: ""; position: absolute; display: block; width: 74%; height: 44%; background-image: radial-gradient(circle, rgba(126, 255, 169, .52) 1px, transparent 1.5px); background-size: 13px 13px; filter: blur(.1px); mask-image: radial-gradient(ellipse at center, #000 10%, rgba(0,0,0,.8) 42%, transparent 72%); }
+.hero-flow::before { left: -20%; top: -9%; transform: rotate(-9deg) skewX(-16deg); animation: flow-a 14s ease-in-out infinite alternate; }
+.hero-flow::after { right: -19%; top: 0; transform: rotate(12deg) skewX(18deg); animation: flow-b 17s ease-in-out infinite alternate; }
+.hero-flow i:nth-child(1) { left: 8%; bottom: -22%; transform: rotate(6deg) scaleX(1.5); opacity: .55; animation: flow-c 19s ease-in-out infinite alternate; }
+.hero-flow i:nth-child(2) { right: 8%; bottom: -24%; transform: rotate(-7deg) scaleX(1.35); opacity: .48; animation: flow-a 16s ease-in-out infinite alternate-reverse; }
+.hero-flow i:nth-child(3) { left: 37%; top: 25%; width: 35%; height: 36%; opacity: .2; animation: flow-b 13s ease-in-out infinite alternate-reverse; }
+@keyframes flow-a { to { transform: rotate(-3deg) skewX(-5deg) translate(5%, 8%) scale(1.1); } }
+@keyframes flow-b { to { transform: rotate(4deg) skewX(6deg) translate(-7%, 9%) scale(1.12); } }
+@keyframes flow-c { to { transform: rotate(-4deg) translate(4%, -9%) scaleX(1.6); } }
+@media (prefers-reduced-motion: reduce) { .hero-flow::before, .hero-flow::after, .hero-flow i { animation: none; } }
