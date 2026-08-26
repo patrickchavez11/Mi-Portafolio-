@@ -1,0 +1,1 @@
+export default function Footer() { return <footer className="border-t border-white/10 px-5 py-7 text-sm text-zinc-500 sm:px-8"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 sm:flex-row"><p>© {new Date().getFullYear()} Patrick. Todos los derechos reservados.</p><p>Diseñado y desarrollado con React.</p></div></footer>; }
